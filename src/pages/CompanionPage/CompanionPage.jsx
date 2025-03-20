@@ -1,12 +1,15 @@
 import profilePic from "/images/UserProfilePic.jpg";
 import locationPin from "/images/locationpin.png";
 import accept from "/images/acceptIcon.png";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 //completar campos una vez que tengamos llamada a la API y borrar texto
 
 function CompanionPage({ name, description, location }) {
   return (
     <>
+      <Header />
       <section className="user-profile_page">
         <div className="user-profile_data">
           <img className="user-profile_picture" src={profilePic} />
@@ -42,6 +45,7 @@ function CompanionPage({ name, description, location }) {
           </button>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
