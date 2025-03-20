@@ -1,10 +1,11 @@
 import './App.css'
-import MainPage from './pages/MainPage/MainPage'
+import UserProfilePage from './pages/UserProfilePage/UserProfilePage'
 
 function App() {
 
   return (
     <>
+    <UserProfilePage />
     </>
   )
 }

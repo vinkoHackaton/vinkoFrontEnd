@@ -1,0 +1,55 @@
+.user-profile_page {
+  padding: 5%;
+
+}
+
+.user-profile_data {
+  display: flex;
+}
+
+.user-profile_picture {
+  border-radius: 20px;
+
+}
+
+.user-profile_coso {
+  margin-left: 10%;
+}
+
+.user-profile_name {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+}
+
+.user-profile_location {
+  font-size: 1.5rem;
+}
+
+.user-profile_needs {
+  background-color: var(--tertiary-color);
+  font-size: 1.5rem;
+  margin-top: 10%;
+}
+
+.user-profile_description {
+  padding: 5%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ad-button {
+  display: flex;
+  width: 20vw;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+}
