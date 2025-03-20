@@ -3,12 +3,15 @@ import profilePic from "/images/UserProfilePic.jpg";
 import locationPin from "/images/locationpin.png";
 import accept from "/images/acceptIcon.png";
 import refuse from "/images/rejectIcon.png";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 //completar campos una vez que tengamos llamada a la API y borrar texto
 
 function UserProfilePage({ name, description, location }) {
   return (
     <>
+    <Header/>
       <section className="user-profile_page">
         <div className="user-profile_data">
           <img className="user-profile_picture" src={profilePic} />
@@ -47,6 +50,7 @@ function UserProfilePage({ name, description, location }) {
           </button>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
