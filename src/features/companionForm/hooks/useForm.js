@@ -8,13 +8,17 @@ const useForm = () => {
     email: "",
     description: "",
   });
-  const handleChange = (e) => {
+  const onChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!Object.values(formData).every(value => value.trim() !== "")) {
+      return
+    }
 
     //Aquí ira la llamada al servicio
     alert(`Datos ingresados:\n${JSON.stringify(formData)}`);
@@ -32,7 +36,7 @@ const useForm = () => {
   };
 
   return {
-    handleChange,
+    onChange,
     handleSubmit,
     formData,
     handleCategoryChange,

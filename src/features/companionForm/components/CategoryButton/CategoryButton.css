@@ -1,0 +1,17 @@
+.category-button {
+    padding: 10px 20px;
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s;
+  }
+  
+  .category-button:hover {
+    background-color: var(--quaternary-color);
+  }
+  
+  .category-button.selected {
+    background-color: var(--quaternary-color);
+    color: black;
+  }

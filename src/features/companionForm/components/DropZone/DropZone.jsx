@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-
+import "./DropZone.css"
 const DropZone = () => {
   const [image, setImage] = useState(null);
 
