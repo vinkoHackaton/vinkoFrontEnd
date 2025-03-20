@@ -2,13 +2,11 @@ import "./MainPageStyle.css";
 import freeAir from "/images/FreeAir.png";
 import exercise from "/images/Physical.png";
 import culture from "/images/Cultural.png";
-import Footer from "../../components/Footer.jsx";
-import Header from "../../components/Header.jsx";
+
 
 function MainPage() {
   return (
     <>
-      <Header />
       <div className="hero-container">
         <p className="title">La soledad pesa menos cuando se comparte. </p>
         <p className="title">Camina con alguien que te escuche.</p>
@@ -74,7 +72,6 @@ function MainPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
