@@ -2,6 +2,7 @@ import "./MainPageStyle.css";
 import freeAir from "/images/FreeAir.png";
 import exercise from "/images/Physical.png";
 import culture from "/images/Cultural.png";
+import Footer from "../../components/Footer.jsx";
 
 function MainPage() {
   return (
@@ -71,6 +72,7 @@ function MainPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
