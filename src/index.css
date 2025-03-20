@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap');
 
-/* RESET */
+
 *,
 *::before,
 *::after {
@@ -13,7 +13,7 @@ html, body {
   height: 100%;
 }
 
-/* VARIABLES */
+
 :root {
   --primary-color: #F1E8DA;
   --secondary-color: #E76F51; 
@@ -23,7 +23,7 @@ html, body {
   --base-spacing: 16px;
 }
 
-/* ESTILOS BÁSICOS */
+
 body {
   font-family: var(--font-family);
   background-color: var(--primary-color);
@@ -32,7 +32,7 @@ body {
   padding: 0;
 }
 
-/* TIPOGRAFÍA */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -43,7 +43,7 @@ p, span, a {
   font-weight: 400;
 }
 
-/* LAYOUT */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -63,7 +63,7 @@ p, span, a {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-/* BOTONES */
+
 button {
   padding: calc(var(--base-spacing) / 2);
   background-color: var(--tertiary-color);
@@ -74,12 +74,12 @@ button {
   transition: background-color 0.3s ease;
 }
 
-/* Simulación de darken en CSS puro */
+
 button:hover {
-  background-color: #e08950; /* Color manual más oscuro */
+  background-color: #e08950; 
 }
 
-/* LINKS */
+
 a {
   color: var(--quaternary-color);
   text-decoration: none;
@@ -89,7 +89,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* FORMULARIO */
+
 input, textarea, select {
   width: 100%;
   padding: var(--base-spacing);
@@ -98,7 +98,7 @@ input, textarea, select {
   font-size: 1rem;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .container {
     width: 95%;
