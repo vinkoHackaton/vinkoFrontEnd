@@ -63,6 +63,5 @@ Vite for fast development
 
 ESLint with React-specific plugins
 
-TypeScript support with @types/react and @types/react-dom
 
 ![captura formulario vinko](https://github.com/user-attachments/assets/2d022a53-f0aa-4a91-81b1-e0261e1f8a97)
