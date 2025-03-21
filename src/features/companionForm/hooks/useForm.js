@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createCompanion } from "../services/fetchCompanion";
 
 const useForm = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -7,22 +8,28 @@ const useForm = () => {
     age: "",
     email: "",
     description: "",
+    photoUrl: "",
+    hourlyRate: "",
+    rating: "1",
   });
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleImageUpload = (url) => {
+    setFormData({ ...formData, photoUrl: url });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!Object.values(formData).every(value => value.trim() !== "")) {
-      return
+    if (Object.values(formData).every((value) => value.trim() !== "")) {
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (formData.age >= 18 && formData.email.match(regex)) {
+        await createCompanion(formData);
+        alert(`Actividades:\n${JSON.stringify(selectedCategories)}`);
+      }
     }
-
-    //Aquí ira la llamada al servicio
-    alert(`Datos ingresados:\n${JSON.stringify(formData)}`);
-    alert(`Actividades:\n${JSON.stringify(selectedCategories)}`);
   };
 
   const handleCategoryChange = (category) => {
@@ -38,8 +45,9 @@ const useForm = () => {
   return {
     onChange,
     handleSubmit,
-    formData,
     handleCategoryChange,
+    handleImageUpload,
+    formData,
     selectedCategories,
   };
 };

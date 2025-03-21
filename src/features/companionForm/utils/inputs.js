@@ -28,6 +28,16 @@ const inputs = [
         label: "Email",
         required: true
     },
+    {
+        id: 4,
+        name: "hourlyRate",
+        type: "number",
+        placeholder: "Precio por hora",
+        label: "Estipula un precio",
+        step: "0.01",
+        errorMessage: "Debes estipular un precio para el plan",
+        required: true
+    }
 ]
 
 export default inputs;

@@ -12,6 +12,7 @@ const CompanionForm = () => {
     onChange,
     handleSubmit,
     handleCategoryChange,
+    handleImageUpload,
     formData,
     selectedCategories,
   } = useForm();
@@ -19,7 +20,7 @@ const CompanionForm = () => {
   return (
     <div className="form-container">
       <form id="form" onSubmit={handleSubmit} noValidate>
-        <DropZone />
+        <DropZone handleImageUpload={handleImageUpload}/>
         <div className="pad-bottom">
           {inputs.map((input, idx) => (
             <FormInput

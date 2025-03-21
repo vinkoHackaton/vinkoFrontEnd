@@ -1,12 +1,15 @@
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import "./DropZone.css"
-const DropZone = () => {
+const DropZone = ({handleImageUpload}) => {
   const [image, setImage] = useState(null);
 
   const onDrop = useCallback((acceptedFiles) => {
-    setImage(acceptedFiles[0]);
-  }, []);
+    const file = acceptedFiles[0];
+    const imageUrl = URL.createObjectURL(file)
+    setImage(imageUrl)
+    handleImageUpload(imageUrl)
+  }, [handleImageUpload]);
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
@@ -17,11 +20,7 @@ const DropZone = () => {
     <>
       <div className="dropzone" {...getRootProps()}>
         <input {...getInputProps()} />
-        {!image ? (
-          <img id="profile-pic" src="/images/profilepic.png" alt="preview" />
-        ) : (
-          <img id="profile-pic" src={URL.createObjectURL(image)} />
-        )}
+          <img id="profile-pic" src={image ? image : "/images/profilepic.png"} alt="preview"/>
       </div>
     </>
   );

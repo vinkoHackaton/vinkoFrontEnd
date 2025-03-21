@@ -18,9 +18,6 @@ const FormInput = (props) => {
         onBlur={handleFocus}
         focused={focused.toString()}
         className="input-field"
-        onInvalid={(e) => e.target.setCustomValidity(null)}
-        onInput={(e) => e.target.setCustomValidity("")}
-        // onKeyDown={(e) => e.preventDefault()}
       />
       <span className="error-text">{errorMessage}</span>
     </div>
