@@ -3,22 +3,38 @@ import locationPin from "/images/locationpin.png";
 import accept from "/images/acceptIcon.png";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { getCompanionById } from "../../services/companionService";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-//completar campos una vez que tengamos llamada a la API y borrar texto
+function CompanionPage({ location }) {
 
-function CompanionPage({ name, description, location }) {
+  const {id} = useParams();
+  const [companion, setCompanion] = useState({});
+
+  useEffect(() => {
+    const fetchCompanion = async () => {
+      const data = await getCompanionById(id);
+        setCompanion({...data});
+    }
+    fetchCompanion();
+  }, [id])
+
+
   return (
     <>
       <Header />
       <section className="user-profile_page">
         <div className="user-profile_data">
-          <img className="user-profile_picture" src={profilePic} />
+          <img className="user-profile_picture" src={companion? companion?.photoUrl : profilePic} />
           <div>
             <div className="user-profile_coso">
-              <h1 className="user-profile_name">{name} Nombre y Apellido </h1>
+              <h1 className="user-profile_name">
+                {companion ? companion?.name : "Nombre y Apellido"} 
+              </h1>
               <span className="user-profile_location">
                 <img src={locationPin} />
-                {location}
+                {location ? location : "Gijón"}
               </span>
             </div>
             <div className="user-profile_needs">
@@ -27,9 +43,8 @@ function CompanionPage({ name, description, location }) {
             </div>
           </div>
         </div>
-
         <p className="user-profile_description">
-          {description}
+          <h1>{companion.description}</h1>
           Soy una mujer mayor, tranquila y amable, que disfruta de las cosas
           sencillas de la vida como salir a caminar. La lectura es una de mis
           grandes pasiones; siempre tengo un libro entre manos y disfruto de las

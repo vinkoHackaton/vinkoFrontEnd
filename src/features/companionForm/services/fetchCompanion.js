@@ -11,13 +11,6 @@ export const createCompanion = (body) => {
     .catch((err) => console.error(err));
 };
 
-export const getCompanionById = async (id) => {
-  fetch(`http://localhost:8080/api/companions/${id}`)
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
-};
-
 export const getAllCompanions = () => {
   fetch("http://localhost:8080/api/companions")
     .then((res) => res.json())

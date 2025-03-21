@@ -5,6 +5,8 @@ import DropZone from "./components/DropZone/DropZone";
 import inputs from "./utils/inputs";
 import categories from "./utils/categories";
 import CategoryButton from "./components/CategoryButton/CategoryButton";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const CompanionForm = () => {
 
@@ -19,6 +21,7 @@ const CompanionForm = () => {
 
   return (
     <div className="form-container">
+      <Header />
       <form id="form" onSubmit={handleSubmit} noValidate>
         <DropZone handleImageUpload={handleImageUpload}/>
         <div className="pad-bottom">
