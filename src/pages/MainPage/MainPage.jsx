@@ -4,38 +4,41 @@ import exercise from "/images/Physical.png";
 import culture from "/images/Cultural.png";
 import Footer from "../../components/Footer.jsx";
 import Header from "../../components/Header.jsx";
-
+import { Link } from "react-router-dom";
 function MainPage() {
+
   return (
     <>
       <Header />
       <div className="hero-container">
         <p className="title">La soledad pesa menos cuando se comparte. </p>
         <p className="title">Camina con alguien que te escuche.</p>
-        <button className="search-button">Busca Acompañante</button>
+        
+          <button className="search-button"><Link to={"/branding"}>Busca Acompañante</Link></button>
       </div>
       <section>
         <h1 className="section-title">Qué quieres hacer hoy?</h1>
         <div className="list-preview">
           <div className="category-item">
-            <a href="/aire-libre">
+            <Link to={"/companion/1"}>
               <img className="categories" src={freeAir}></img>
               <div className="category-label">Aire Libre</div>
-            </a>
+            </Link>
           </div>
 
           <div class="category-item">
-            <a href="/actividades-culturales">
+            <Link to={"/companion/2"}>
               <img className="categories" src={culture}></img>
               <div class="category-label">Actividades Culturales</div>
-            </a>
+            </Link>
+            
           </div>
 
           <div class="category-item">
-            <a href="/ejercicio-fisico">
+            <Link to={"/companion/10"}>
               <img className="categories" src={exercise}></img>
               <div class="category-label">Ejercicio Físico</div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

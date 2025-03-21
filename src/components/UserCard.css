@@ -1,8 +1,12 @@
 .bg-green {
-  background-color: #17a043;
+  background-color: var(--tertiary-color);
   padding: 1.5rem 0.8rem;
   border-radius: 1rem;
-  width: 20%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 .row {
   display: flex;
@@ -18,20 +22,25 @@
   color: black;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
 }
+.user-btn:hover{
+  background-color: var(--quaternary-color);
+}
+.handshake-button{
+  background-image: url("images/BuyButton.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30%;
+}
 .info-btn {
   width: 90%;
 }
-#profile-pic {
+.profile-pic {
   width: 100%;
-  object-fit: contain;
-}
-#handshake {
-  width: 100%;
-  object-fit: contain;
+  height: 180px;
+  object-fit: fill;
 }

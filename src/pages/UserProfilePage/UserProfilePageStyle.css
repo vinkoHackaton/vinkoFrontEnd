@@ -1,15 +1,16 @@
 .user-profile_page {
   padding: 5%;
-
 }
-
 .user-profile_data {
   display: flex;
+  width: 50%;
+  height: 10%;
 }
 
 .user-profile_picture {
   border-radius: 20px;
-
+  width: 100%;
+  object-fit: contain;
 }
 
 .user-profile_coso {

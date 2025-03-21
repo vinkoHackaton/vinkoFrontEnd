@@ -1,19 +1,22 @@
+import { Link } from "react-router-dom";
 import "./UserCard.css";
 
-const UserCard = ({ name, description }) => {
+const UserCard = ({ name, description, imageUrl, id }) => {
+
+  console.log(imageUrl)
   return (
     <>
       <div className="bg-green">
         <div className="picture">
-          <img id="profile-pic" src="/profilepic.png" alt="profilepic" />
+          <img className="profile-pic" src={imageUrl && imageUrl.startsWith('blob') ? "/images/profilepic.png" : imageUrl} alt="profilepic" />
         </div>
         <h2>{name}</h2>
         <p>{description}</p>
         <div className="row">
-          <button className="user-btn info-btn">Ver más sobre mí</button>
-          <button className="user-btn">
-            <img id="handshake" src="/BuyButton.png" alt="hanshake" />
-          </button>
+          <Link to={`/companion/${id}`}>
+            <button className="user-btn info-btn">Ver más sobre mí</button>
+          </Link>
+          <button className="user-btn handshake-button"></button>
         </div>
       </div>
     </>
