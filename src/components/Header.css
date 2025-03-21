@@ -1,0 +1,24 @@
+.header {
+    background-color: #E76F51;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+  
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según necesites */
+    height: auto;
+    margin-top: 10px;
+}
+  
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-top: -5px;
+}
+  
+.icon {
+    width: 32px;
+    height: 32px;
+}  

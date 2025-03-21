@@ -1,0 +1,46 @@
+.bg-green {
+  background-color: var(--tertiary-color);
+  padding: 1.5rem 0.8rem;
+  border-radius: 1rem;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.picture {
+  width: min(90%, 32rem);
+  margin-inline: auto;
+}
+.user-btn {
+  border-radius: 25px;
+  background-color: #ffff;
+  color: black;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+.user-btn:hover{
+  background-color: var(--quaternary-color);
+}
+.handshake-button{
+  background-image: url("images/BuyButton.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30%;
+}
+.info-btn {
+  width: 90%;
+}
+.profile-pic {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+}
